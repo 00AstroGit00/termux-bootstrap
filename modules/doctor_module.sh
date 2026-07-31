@@ -16,6 +16,8 @@ run_doctor_module() {
     local checks=(
         "${SCRIPT_DIR}/doctor/network_check.sh"
         "${SCRIPT_DIR}/doctor/apt_check.sh"
+        "${SCRIPT_DIR}/doctor/storage_check.sh"
+        "${SCRIPT_DIR}/doctor/permissions_check.sh"
         "${SCRIPT_DIR}/doctor/environment_check.sh"
     )
 
