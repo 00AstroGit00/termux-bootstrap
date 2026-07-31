@@ -1,14 +1,13 @@
-# Configuration Guide
+# Configuration Guide & Profile Customization
 
 Configuration variables are stored in `config.env` and declarative YAML files in `manifests/`.
 
-## `config.env` Options
-- `INSTALL_X11`: Set to `1` to enable Termux:X11 display server packages.
-- `INSTALL_PROOT`: Set to `1` to enable proot-distro Linux guest environments.
-- `INSTALL_AI`: Set to `1` to enable AI environment packages.
+## Environment Profiles (`examples/profiles/`)
+- `examples/profiles/minimal.env`: Resource-friendly profile for low-spec Android devices.
+- `examples/profiles/full-developer.env`: Full workstation profile enabling X11, proot-distro, AI toolchains, and modern CLI tools.
 
-## Manifest Configuration
-- `manifests/packages.yaml`: Core and optional package definitions.
-- `manifests/repositories.yaml`: Mirror sources and APT components.
-- `manifests/installers.yaml`: Custom installer adapters and download URLs.
+## Nerd Fonts & Terminal Icon Rendering
+To ensure icons from `starship`, `eza`, `fastfetch`, and `btop` render properly:
+1. Download a Nerd Font (such as `MesloLGS NF` or `FiraCode Nerd Font`).
+2. Set the custom font in your Termux Terminal Styling preferences or Termux:GUI settings.
 EOF
