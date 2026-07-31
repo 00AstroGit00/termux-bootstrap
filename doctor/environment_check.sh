@@ -13,11 +13,8 @@ check_environment() {
     log_info "  - Free Disk:   ${SYS_AVAILABLE_DISK_MB} MB"
     log_info "  - Total RAM:   ${SYS_TOTAL_RAM_MB} MB"
 
-    # Check for legacy Google Play Store build warning
-    if [[ -d "/data/data/com.termux/files/usr" ]]; then
-        if grep -q -i "com.termux" /proc/self/cgroup 2>/dev/null; then
-            log_info "  - Build Signature: Valid Termux Build"
-        fi
+    if [[ "${SYS_ANDROID_API}" -ge 31 ]]; then
+        log_info "  - Note: On Android 12+ (API ${SYS_ANDROID_API}), ensure 'Disable child process restrictions' is set in Developer Options if running long background services."
     fi
 
     log_success "Environment Diagnostic: PASS"
