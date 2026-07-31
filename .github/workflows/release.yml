@@ -1,0 +1,32 @@
+name: Release Automation
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Package Framework Archive
+        run: |
+          VERSION="${GITHUB_REF_NAME}"
+          ARCHIVE_NAME="termux-bootstrap-${VERSION}.tar.gz"
+          tar -czf "${ARCHIVE_NAME}" --exclude='.git' --exclude='.github' .
+          sha256sum "${ARCHIVE_NAME}" > SHA256SUMS
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            termux-bootstrap-*.tar.gz
+            SHA256SUMS
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+EOF
