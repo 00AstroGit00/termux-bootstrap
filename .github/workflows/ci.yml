@@ -1,0 +1,28 @@
+name: Termux Bootstrap Framework CI/CD
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    name: Lint & Automated Test Suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code repository
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck & Linting Tools
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck Static Analysis
+        run: |
+          shellcheck -x *.sh bootstrap/*.sh lib/*.sh modules/*.sh installers/*.sh providers/*.sh doctor/*.sh repair/*.sh
+
+      - name: Execute Automated Test Suite
+        run: |
+          chmod +x tests/run_tests.sh tests/unit/*.sh tests/integration/*.sh
+          bash tests/run_tests.sh

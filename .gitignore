@@ -1,0 +1,12 @@
+# Git Ignore Rules for Termux Bootstrap Framework
+.DS_Store
+*.log
+*.jsonl
+cache/test_*
+cache/dummy_*
+/tmp/*
+$HOME/.termux-bootstrap/
+reports/*.tmp
+*.pid
+*.lock
+EOF

@@ -1,0 +1,34 @@
+# Termux Bootstrap Framework - Installer Manifest
+# Configures custom third-party installers with fallback mirrors & checksum rules.
+
+installers:
+  - id: termuxvoid
+    name: "Termux Void Linux Installer"
+    script: "installers/termuxvoid.sh"
+    primary_url: "https://raw.githubusercontent.com/termux/termux-packages/master/scripts/build-all.sh"
+    fallback_urls:
+      - "https://gitlab.com/termux-mirrors/termuxvoid/raw/main/install.sh"
+      - "https://codeberg.org/termux-mirrors/termuxvoid/raw/branch/main/install.sh"
+    checksum: "SKIP"
+    priority: 10
+    required: false
+
+  - id: termux-build-essential
+    name: "Termux Build Essential Compiler Toolchain"
+    script: "installers/termux_build_essential.sh"
+    primary_url: "https://raw.githubusercontent.com/termux/termux-packages/master/packages/build-essential/build.sh"
+    fallback_urls:
+      - "https://gitlab.com/termux-mirrors/build-essential/raw/main/build.sh"
+    checksum: "SKIP"
+    priority: 5
+    required: false
+
+  - id: termux-essentials
+    name: "Termux Essentials Utility Suite"
+    script: "installers/termux_essentials.sh"
+    primary_url: "https://raw.githubusercontent.com/termux/termux-packages/master/packages/termux-tools/build.sh"
+    fallback_urls:
+      - "https://codeberg.org/termux-mirrors/termux-tools/raw/main/build.sh"
+    checksum: "SKIP"
+    priority: 1
+    required: true

@@ -1,0 +1,13 @@
+# Termux Bootstrap Framework - Plugins Manifest
+plugins:
+  - name: zsh-autosuggestions
+    type: git
+    repo: "https://github.com/zsh-users/zsh-autosuggestions"
+    target: "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    enabled: true
+
+  - name: zsh-syntax-highlighting
+    type: git
+    repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    target: "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+    enabled: true

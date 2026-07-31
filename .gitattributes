@@ -1,0 +1,8 @@
+# Git Attributes & Line Endings Normalization
+* text=auto eol=lf
+*.sh text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.png binary
+*.jpg binary
+EOF

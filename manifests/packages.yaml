@@ -1,0 +1,67 @@
+# Termux Bootstrap Framework - Package Manifest
+# Defines core and optional packages with versions, priorities, dependencies, and checksums.
+
+packages:
+  - name: bash
+    version: "5.2"
+    priority: 1
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: zsh
+    version: "5.9"
+    priority: 2
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: git
+    version: "2.44"
+    priority: 1
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: curl
+    version: "8.6"
+    priority: 1
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: openssh
+    version: "9.7"
+    priority: 2
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: termux-services
+    version: "0.10"
+    priority: 2
+    required: true
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: termux-api
+    version: "0.58"
+    priority: 3
+    required: false
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: proot-distro
+    version: "4.0"
+    priority: 3
+    required: false
+    arch: ["aarch64", "arm", "x86_64"]
+    min_api: 24
+
+  - name: jq
+    version: "1.7"
+    priority: 3
+    required: false
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+EOF

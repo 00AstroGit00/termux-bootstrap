@@ -1,0 +1,7 @@
+# ShellCheck Configuration File
+# Disable low-priority stylistic rules for portable Termux shell scripts
+
+disable=SC1090  # Can't follow non-constant source
+disable=SC1091  # Not following sourced file
+disable=SC2034  # Variable appears unused (exported or sourced elsewhere)
+EOF

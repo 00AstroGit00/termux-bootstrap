@@ -1,0 +1,11 @@
+# Termux Bootstrap Framework - Services Manifest
+services:
+  - name: sshd
+    package: openssh
+    auto_start: true
+    enabled: true
+
+  - name: ftpd
+    package: pure-ftpd
+    auto_start: false
+    enabled: false

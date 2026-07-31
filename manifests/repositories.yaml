@@ -1,0 +1,31 @@
+# Termux Bootstrap Framework - Repository Manifest
+# Manages APT repositories, custom mirrors, and fallback sources.
+
+repositories:
+  - id: main
+    name: "Termux Main Repository"
+    url: "https://packages.termux.dev/apt/termux-main"
+    component: "main"
+    priority: 1
+    required: true
+
+  - id: root
+    name: "Termux Root Repository"
+    url: "https://packages.termux.dev/apt/termux-root"
+    component: "root"
+    priority: 2
+    required: false
+
+  - id: x11
+    name: "Termux X11 Repository"
+    url: "https://packages.termux.dev/apt/termux-x11"
+    component: "x11"
+    priority: 3
+    required: false
+
+  - id: tur
+    name: "Termux User Repository (TUR)"
+    url: "https://tur.kcubeterm.com"
+    component: "tur"
+    priority: 4
+    required: false
