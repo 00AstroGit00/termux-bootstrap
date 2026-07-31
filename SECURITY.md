@@ -1,14 +1,29 @@
 # Security Policy
 
+## Supported Versions
+
+We actively provide security updates and patches for the following releases:
+
+| Version | Supported          | Security Patches |
+| ------- | ------------------ | ---------------- |
+| v1.x.x  | :white_check_mark: | Active           |
+| < 1.0.0 | :x:                | EOL              |
+
 ## Reporting a Vulnerability
 
-We take the security of the Termux Bootstrap Framework seriously. If you discover a vulnerability or security issue, please do not open a public issue.
+If you discover a potential security vulnerability within the **Termux Bootstrap Framework**, please report it privately to avoid exposing users to risk before a patch is available.
 
-Instead, please send a private security report to:
-`security@termux.org` or open a GitHub Security Advisory.
+- **GitHub Private Vulnerability Reporting**: Submit a private advisory directly via the repository's [Security Advisories](https://github.com/00AstroGit00/termux-bootstrap/security/advisories) tab.
+- **Email Contact**: Send reports to `security@termux-bootstrap.org`.
 
-## Security Practices
-- All downloads require SHA256/SHA512 checksum verification.
-- Sensitive file operations enforce strict `umask 077` file permission masks.
-- Pre-execution snapshots allow instant rollback in case of interrupted or unexpected operations.
+### Please Include:
+1. A detailed description of the vulnerability.
+2. Steps to reproduce or proof-of-concept (PoC) code.
+3. Potential security impact.
+
+## Response SLA & Safe Harbor
+
+- **Acknowledgment**: We aim to acknowledge all reports within **5 business days**.
+- **Remediation**: We target fixing critical vulnerabilities within **30 days** and standard issues within **90 days**.
+- **Safe Harbor**: We commit not to pursue legal action against researchers acting in good faith and following responsible disclosure guidelines.
 EOF
