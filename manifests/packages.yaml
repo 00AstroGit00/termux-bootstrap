@@ -65,6 +65,28 @@ packages:
     arch: ["aarch64", "arm", "x86_64", "i686"]
     min_api: 24
 
+  # AI & Python Engine
+  - name: python
+    version: "3.11"
+    priority: 3
+    required: false
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: python-pip
+    version: "24.0"
+    priority: 3
+    required: false
+    arch: ["aarch64", "arm", "x86_64", "i686"]
+    min_api: 24
+
+  - name: ollama
+    version: "0.1.30"
+    priority: 4
+    required: false
+    arch: ["aarch64", "arm", "x86_64"]
+    min_api: 24
+
   # Modern 2026 CLI Toolchain
   - name: fastfetch
     version: "2.10"
