@@ -1,6 +1,21 @@
-# Ultimate Production-Grade Termux Bootstrap Framework v4.0
+# Ultimate Production-Grade Termux Bootstrap Framework v1.0.0
 
 A modular, manifest-driven, transaction-safe, self-healing, idempotent provisioning framework for Termux environments on Android.
+
+---
+
+## ⚡ Quick Start (Fresh Termux Shell One-Liner)
+
+To bootstrap a freshly installed Termux Android environment with a single command, paste this into your Termux shell:
+
+```bash
+pkg update -y && pkg install -y git curl && git clone https://github.com/00AstroGit00/termux-bootstrap.git ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+```
+
+### Alternatively (Release Archive Method):
+```bash
+pkg update -y && pkg install -y curl tar && mkdir -p ~/.termux-bootstrap-framework && curl -sSL https://github.com/00AstroGit00/termux-bootstrap/releases/download/v1.0.0/termux-bootstrap-v1.0.0.tar.gz | tar -xzf - -C ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+```
 
 ---
 
@@ -40,7 +55,7 @@ termux-bootstrap-v4/
 
 ---
 
-## Quick Usage
+## Command Usage
 
 ```bash
 # Execute full provisioning pipeline
