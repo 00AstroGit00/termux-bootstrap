@@ -19,9 +19,11 @@ run_repository_manager() {
         return 0
     fi
 
-    log_info "Synchronizing APT repositories..."
+    log_info "Synchronizing APT repositories (Main, Root, X11, TUR, Glibc)..."
 
+    # Install tur-repo and glibc-repo if available
     if command -v pkg >/dev/null 2>&1; then
+        pkg install -y tur-repo glibc-repo 2>/dev/null || true
         log_info "Updating pkg package database index..."
         pkg update -y || apt-get update -y || log_warn "Package database index update encountered warnings."
     elif command -v apt-get >/dev/null 2>&1; then

@@ -29,3 +29,11 @@ repositories:
     component: "tur"
     priority: 4
     required: false
+
+  - id: glibc
+    name: "Termux Glibc Compatibility Repository"
+    url: "https://packages-cf.termux.dev/apt/termux-glibc"
+    component: "glibc"
+    priority: 5
+    required: false
+EOF
