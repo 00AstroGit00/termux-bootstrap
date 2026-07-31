@@ -4,17 +4,17 @@ A modular, manifest-driven, transaction-safe, self-healing, idempotent provision
 
 ---
 
-## ⚡ Quick Start (Fresh Termux Shell One-Liner)
+## ⚡ Quick Start (Ultra-Short Fresh Termux One-Liner)
 
 To bootstrap a freshly installed Termux Android environment with a single command, paste this into your Termux shell:
 
 ```bash
-pkg update -y && pkg install -y git curl && git clone https://github.com/00AstroGit00/termux-bootstrap.git ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+pkg i -y curl && curl -sSL https://raw.githubusercontent.com/00AstroGit00/termux-bootstrap/main/install.sh | bash
 ```
 
-### Alternatively (Release Archive Method):
+### Alternatively (Git Clone Method):
 ```bash
-pkg update -y && pkg install -y curl tar && mkdir -p ~/.termux-bootstrap-framework && curl -sSL https://github.com/00AstroGit00/termux-bootstrap/releases/download/v1.0.0/termux-bootstrap-v1.0.0.tar.gz | tar -xzf - -C ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+pkg update -y && pkg install -y git curl && git clone https://github.com/00AstroGit00/termux-bootstrap.git ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
 ```
 
 ---
@@ -38,6 +38,7 @@ termux-bootstrap-v4/
 ├── repair.sh                    # Auto-heal repair CLI wrapper
 ├── rollback.sh                  # Rollback manager CLI wrapper
 ├── update.sh                    # Self-updater CLI wrapper
+├── install.sh                   # Remote web launcher
 ├── config.env                   # Configuration settings
 ├── bootstrap/                   # Main CLI engine & parser
 ├── lib/                         # Standard foundation libraries

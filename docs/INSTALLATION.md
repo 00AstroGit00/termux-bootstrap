@@ -1,18 +1,16 @@
-# Installation & One-Liner Execution Guide
+# Installation & Ultra-Short One-Liner Guide
 
-## Fresh Termux Shell (Single Command Installation)
+## Fresh Termux Shell (Ultra-Short Single Command)
 
-For a brand new, freshly installed Termux Android environment, execute the following one-liner in your terminal:
+For a brand new, freshly installed Termux Android environment, execute this 93-character command in your terminal:
 
 ```bash
-pkg update -y && pkg install -y git curl && git clone https://github.com/00AstroGit00/termux-bootstrap.git ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+pkg i -y curl && curl -sSL https://raw.githubusercontent.com/00AstroGit00/termux-bootstrap/main/install.sh | bash
 ```
 
-### Release Archive Method
-If `git` is unavailable or you prefer a tarball distribution release:
-
+### Git Clone Method
 ```bash
-pkg update -y && pkg install -y curl tar && mkdir -p ~/.termux-bootstrap-framework && curl -sSL https://github.com/00AstroGit00/termux-bootstrap/releases/download/v1.0.0/termux-bootstrap-v1.0.0.tar.gz | tar -xzf - -C ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
+pkg update -y && pkg install -y git curl && git clone https://github.com/00AstroGit00/termux-bootstrap.git ~/.termux-bootstrap-framework && cd ~/.termux-bootstrap-framework && ./bootstrap.sh
 ```
 
 ---
