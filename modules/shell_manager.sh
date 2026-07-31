@@ -12,7 +12,7 @@ source "${SCRIPT_DIR}/lib/state_db.sh"
 run_shell_manager() {
     log_section "Shell Manager"
 
-    log_info "Configuring default user shell & modern CLI aliases..."
+    log_info "Configuring default user shell & Zsh startup speed optimizations..."
     local target_shell="${PREFIX:-/data/data/com.termux/files/usr}/bin/zsh"
 
     if [[ -x "${target_shell}" ]]; then
@@ -24,11 +24,15 @@ run_shell_manager() {
         log_info "Default shell remains Bash."
     fi
 
-    # Create / update Zsh profile with modern aliases
+    # Create / update Zsh profile with fast completion cache & modern aliases
     if [[ ! -f "$HOME/.zshrc" ]]; then
         cat <<'EOF' > "$HOME/.zshrc"
-# Termux Bootstrap Zsh Configuration & Modern 2026 CLI Integrations
+# Termux Bootstrap Zsh Configuration & Fast Startup Optimizations
 export PATH="$PREFIX/bin:$HOME/.termux-bootstrap/bin:$PATH"
+
+# Snappy Zsh completion cache
+autoload -Uz compinit
+compinit -C
 
 # Modern CLI Tool Aliases
 alias ll="ls -la"
